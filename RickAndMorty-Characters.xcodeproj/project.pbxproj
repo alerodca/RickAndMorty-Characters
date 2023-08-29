@@ -56,6 +56,9 @@
 		756C569B2A9DE7CB00B8BBDA /* RickAndMorty-Characters */ = {
 			isa = PBXGroup;
 			children = (
+				756C56B32A9DF0D100B8BBDA /* Model */,
+				756C56B42A9DF0D600B8BBDA /* View */,
+				756C56B52A9DF0DB00B8BBDA /* Controller */,
 				756C569C2A9DE7CB00B8BBDA /* AppDelegate.swift */,
 				756C569E2A9DE7CB00B8BBDA /* SceneDelegate.swift */,
 				756C56A02A9DE7CB00B8BBDA /* ViewController.swift */,
@@ -65,6 +68,27 @@
 				756C56AA2A9DE7CC00B8BBDA /* Info.plist */,
 			);
 			path = "RickAndMorty-Characters";
+			sourceTree = "<group>";
+		};
+		756C56B32A9DF0D100B8BBDA /* Model */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		756C56B42A9DF0D600B8BBDA /* View */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		756C56B52A9DF0DB00B8BBDA /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
