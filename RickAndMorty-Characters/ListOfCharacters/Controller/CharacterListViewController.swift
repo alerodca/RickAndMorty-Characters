@@ -26,6 +26,16 @@ class CharacterListViewController: UIViewController {
         super.viewDidLoad()
         // Do any additional setup after loading the view.
         
+        tableViewDelegate?.didTapOnCell = { [weak self] index in
+            print("index \(index)")
+            
+            // Present New VC
+            guard let dataSource = self?.tableViewDataSource else { return }
+            let characterModel = dataSource.characters[index]
+            let characterModelDetailViewController = CharacterDetailViewController(CharacterDetailModel: characterModel)
+            self?.present(characterModelDetailViewController, animated: true)
+        }
+        
         Task {
             let characters = await apiClient.getListOfCharacters()
             print("Characters \(characters)")

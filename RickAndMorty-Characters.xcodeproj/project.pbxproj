@@ -21,6 +21,8 @@
 		756C56C32A9E0BD800B8BBDA /* ListOfCharactersTableViewDataSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C56C22A9E0BD800B8BBDA /* ListOfCharactersTableViewDataSource.swift */; };
 		756C56C62A9E48FD00B8BBDA /* Kingfisher in Frameworks */ = {isa = PBXBuildFile; productRef = 756C56C52A9E48FD00B8BBDA /* Kingfisher */; };
 		756C56C82A9E49EA00B8BBDA /* UITableViewDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 756C56C72A9E49EA00B8BBDA /* UITableViewDelegate.swift */; };
+		75E0BAE62A9F34640019B699 /* CharacterDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0BAE52A9F34640019B699 /* CharacterDetailView.swift */; };
+		75E0BAE82A9F351F0019B699 /* CharacterDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 75E0BAE72A9F351F0019B699 /* CharacterDetailViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -39,6 +41,8 @@
 		756C56C02A9E014800B8BBDA /* CharacterListCellView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterListCellView.swift; sourceTree = "<group>"; };
 		756C56C22A9E0BD800B8BBDA /* ListOfCharactersTableViewDataSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ListOfCharactersTableViewDataSource.swift; sourceTree = "<group>"; };
 		756C56C72A9E49EA00B8BBDA /* UITableViewDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UITableViewDelegate.swift; sourceTree = "<group>"; };
+		75E0BAE52A9F34640019B699 /* CharacterDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailView.swift; sourceTree = "<group>"; };
+		75E0BAE72A9F351F0019B699 /* CharacterDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CharacterDetailViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -72,13 +76,10 @@
 		756C569B2A9DE7CB00B8BBDA /* RickAndMorty-Characters */ = {
 			isa = PBXGroup;
 			children = (
+				75E0BAE42A9F34310019B699 /* Utils */,
 				756C56CA2A9E4B6800B8BBDA /* CharacterDetail */,
-				756C56C92A9E4B2900B8BBDA /* ListOfCharacters */,
-				756C569C2A9DE7CB00B8BBDA /* AppDelegate.swift */,
-				756C569E2A9DE7CB00B8BBDA /* SceneDelegate.swift */,
-				756C56A52A9DE7CC00B8BBDA /* Assets.xcassets */,
-				756C56A72A9DE7CC00B8BBDA /* LaunchScreen.storyboard */,
 				756C56AA2A9DE7CC00B8BBDA /* Info.plist */,
+				756C56C92A9E4B2900B8BBDA /* ListOfCharacters */,
 			);
 			path = "RickAndMorty-Characters";
 			sourceTree = "<group>";
@@ -136,6 +137,7 @@
 		756C56CB2A9E4B7200B8BBDA /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				75E0BAE72A9F351F0019B699 /* CharacterDetailViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -143,6 +145,7 @@
 		756C56CC2A9E4B7A00B8BBDA /* View */ = {
 			isa = PBXGroup;
 			children = (
+				75E0BAE52A9F34640019B699 /* CharacterDetailView.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -152,6 +155,17 @@
 			children = (
 			);
 			path = Model;
+			sourceTree = "<group>";
+		};
+		75E0BAE42A9F34310019B699 /* Utils */ = {
+			isa = PBXGroup;
+			children = (
+				756C569C2A9DE7CB00B8BBDA /* AppDelegate.swift */,
+				756C569E2A9DE7CB00B8BBDA /* SceneDelegate.swift */,
+				756C56A52A9DE7CC00B8BBDA /* Assets.xcassets */,
+				756C56A72A9DE7CC00B8BBDA /* LaunchScreen.storyboard */,
+			);
+			path = Utils;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -232,6 +246,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				756C56C32A9E0BD800B8BBDA /* ListOfCharactersTableViewDataSource.swift in Sources */,
+				75E0BAE82A9F351F0019B699 /* CharacterDetailViewController.swift in Sources */,
+				75E0BAE62A9F34640019B699 /* CharacterDetailView.swift in Sources */,
 				756C56B92A9DF80200B8BBDA /* CharacterModelResponse.swift in Sources */,
 				756C56A12A9DE7CB00B8BBDA /* CharacterListViewController.swift in Sources */,
 				756C56C12A9E014800B8BBDA /* CharacterListCellView.swift in Sources */,
