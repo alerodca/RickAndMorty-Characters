@@ -18,6 +18,7 @@ class CharacterDetailView: UIView {
     let characterName: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 22)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
@@ -25,12 +26,58 @@ class CharacterDetailView: UIView {
     let characterStatus: UILabel = {
         let label = UILabel()
         label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 22)
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
     }()
     
     let characterSpecie: UILabel = {
         let label = UILabel()
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 22)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let characterGender: UILabel = {
+        let label = UILabel()
+        label.numberOfLines = 0
+        label.font = UIFont.systemFont(ofSize: 22)
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let Name: UILabel = {
+        let label = UILabel()
+        label.text = "Name: "
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let Status: UILabel = {
+        let label = UILabel()
+        label.text = "Status: "
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let Gender: UILabel = {
+        let label = UILabel()
+        label.text = "Gender: "
+        label.font = UIFont.boldSystemFont(ofSize: 22)
+        label.numberOfLines = 0
+        label.translatesAutoresizingMaskIntoConstraints = false
+        return label
+    }()
+    
+    let Specie: UILabel = {
+        let label = UILabel()
+        label.text = "Specie: "
+        label.font = UIFont.boldSystemFont(ofSize: 22)
         label.numberOfLines = 0
         label.translatesAutoresizingMaskIntoConstraints = false
         return label
@@ -53,21 +100,43 @@ class CharacterDetailView: UIView {
         addSubview(characterName)
         addSubview(characterStatus)
         addSubview(characterSpecie)
+        addSubview(characterGender)
+        
+        addSubview(Name)
+        addSubview(Status)
+        addSubview(Specie)
+        addSubview(Gender)
+        
         
         NSLayoutConstraint.activate([
-            characterImageView.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 12),
-            characterImageView.topAnchor.constraint(equalTo: topAnchor, constant: 12),
-            characterImageView.heightAnchor.constraint(equalToConstant: 200),
-            characterImageView.widthAnchor.constraint(equalToConstant: 200),
+            characterImageView.centerXAnchor.constraint(equalTo: centerXAnchor),
+            characterImageView.topAnchor.constraint(equalTo: topAnchor, constant: 60),
+            characterImageView.heightAnchor.constraint(equalToConstant: 350),
+            characterImageView.widthAnchor.constraint(equalToConstant: 350),
             
-            characterName.leadingAnchor.constraint(equalTo: characterImageView.trailingAnchor, constant: 20),
-            characterName.topAnchor.constraint(equalTo: characterImageView.topAnchor),
+            Name.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 25),
+            Name.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
             
-            characterStatus.leadingAnchor.constraint(equalTo: characterName.leadingAnchor),
-            characterStatus.topAnchor.constraint(equalTo: characterName.bottomAnchor, constant: 8),
+            characterName.topAnchor.constraint(equalTo: characterImageView.bottomAnchor, constant: 25),
+            characterName.leadingAnchor.constraint(equalTo: Name.trailingAnchor, constant: 4),
             
-            characterSpecie.leadingAnchor.constraint(equalTo: characterName.leadingAnchor),
-            characterSpecie.topAnchor.constraint(equalTo: characterStatus.bottomAnchor, constant: 8),
+            Gender.topAnchor.constraint(equalTo: Name.bottomAnchor, constant: 10),
+            Gender.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            
+            characterGender.topAnchor.constraint(equalTo: characterName.bottomAnchor, constant: 10),
+            characterGender.leadingAnchor.constraint(equalTo: Gender.trailingAnchor, constant: 4),
+            
+            Specie.topAnchor.constraint(equalTo: Gender.bottomAnchor, constant: 10),
+            Specie.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            
+            characterSpecie.topAnchor.constraint(equalTo: characterGender.bottomAnchor, constant: 10),
+            characterSpecie.leadingAnchor.constraint(equalTo: Specie.trailingAnchor, constant: 4),
+            
+            Status.topAnchor.constraint(equalTo: Specie.bottomAnchor, constant: 10),
+            Status.leadingAnchor.constraint(equalTo: leadingAnchor, constant: 30),
+            
+            characterStatus.topAnchor.constraint(equalTo: characterSpecie.bottomAnchor, constant: 10),
+            characterStatus.leadingAnchor.constraint(equalTo: Status.trailingAnchor, constant: 4),
         ])
     }
     
@@ -75,6 +144,7 @@ class CharacterDetailView: UIView {
         self.characterName.text = model.name
         self.characterSpecie.text = model.species
         self.characterStatus.text = model.status
+        self.characterGender.text = model.gender
         self.characterImageView.kf.setImage(with: URL(string: model.image))
     }
 }

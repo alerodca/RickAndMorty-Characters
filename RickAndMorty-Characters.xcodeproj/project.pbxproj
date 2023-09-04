@@ -78,8 +78,8 @@
 			children = (
 				75E0BAE42A9F34310019B699 /* Utils */,
 				756C56CA2A9E4B6800B8BBDA /* CharacterDetail */,
-				756C56AA2A9DE7CC00B8BBDA /* Info.plist */,
 				756C56C92A9E4B2900B8BBDA /* ListOfCharacters */,
+				756C56AA2A9DE7CC00B8BBDA /* Info.plist */,
 			);
 			path = "RickAndMorty-Characters";
 			sourceTree = "<group>";

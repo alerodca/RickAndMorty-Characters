@@ -9,6 +9,7 @@ import Foundation
 import UIKit
 
 class CharacterListView: UIView {
+    
     let charactersTableView: UITableView = {
         let tableView = UITableView()
         tableView.translatesAutoresizingMaskIntoConstraints = false
@@ -29,10 +30,12 @@ class CharacterListView: UIView {
         addSubview(charactersTableView)
         
         NSLayoutConstraint.activate([
+            
+            charactersTableView.topAnchor.constraint(equalTo: topAnchor),
             charactersTableView.leadingAnchor.constraint(equalTo: leadingAnchor),
             charactersTableView.trailingAnchor.constraint(equalTo: trailingAnchor),
-            charactersTableView.topAnchor.constraint(equalTo: topAnchor),
             charactersTableView.bottomAnchor.constraint(equalTo: bottomAnchor)
+             
         ])
     }
 }
